@@ -1,6 +1,7 @@
 # React + Vite
 
-![soldier_helmet_art_123765_1920x1080](https://github.com/Danyal494/text-on-sphare/assets/167676132/b2a5164b-5d52-4b99-beb5-8d2c1bafe46d)
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
