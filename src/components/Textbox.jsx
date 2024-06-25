@@ -27,15 +27,15 @@ const BoxGeometry = () => {
 
   return (
     <mesh position={[0, 0.1, 0]}>
-      <sphereGeometry  args={[1, 32, 32]} />
-      <meshStandardMaterial roughness={0} color="orange" />
+      <sphereGeometry  args={[1, 63, 63]} />
+      <meshStandardMaterial emissive="orange" emissiveIntensity={1} metalness={1} roughness={0} color="orange" />
       {letters.map(({ letter, position, rotation }, index) => (
         <Text
           key={index}
           position={position}
           rotation={rotation}
           fontSize={0.1}
-          color="white"
+          color="black"
           anchorX="center"
           anchorY="middle"
         >
@@ -49,8 +49,8 @@ const BoxGeometry = () => {
 const Textbox = () => {
   return (
     <div className="h-screen w-screen">
-      <Canvas >
-        
+      <Canvas camera={{position:[0,0,0.1] ,fov:10}} >
+        {/* <ambientLight/> */}
         <Environment preset="city" background={false} />
         <color attach="background" args={['#64748b']} />
          <axesHelper/>
@@ -59,7 +59,8 @@ const Textbox = () => {
          minPolarAngle={0}
          enablePan={false}
          rotateSpeed={0.5} 
-         maxDistance={10} minDistance={4} />
+        //  maxDistance={10} 
+         minDistance={4} />
         <BoxGeometry    />
       </Canvas>
     </div>
