@@ -59,7 +59,7 @@ const Textbox = () => {
          minPolarAngle={0}
          enablePan={false}
          rotateSpeed={0.5} 
-         maxDistance={60} 
+         maxDistance={39} 
          minDistance={4} />
         <BoxGeometry    />
       </Canvas>
